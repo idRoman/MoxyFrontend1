@@ -67,7 +67,7 @@ describe('Moxymind Frontend Test', () => {
     });
 
     // Test case 6: Sorting items by price and name is useful for user experience
-    it('Should sort items by price low to high', () => {
+    it('Should sort items by price and name', () => {
         cy.login();
         cy.url().should('include', '/inventory.html');
         cy.verifyPriceSorting('lohi');
