@@ -12,8 +12,8 @@ declare global {
       login(optionalUsername?: string, optionalPassword?: string): Chainable<Element>;
       getByDataTest(selector: string, ...args: any[]): Chainable<Element>;
       getById(selector: string, ...args: any[]): Chainable<Element>;
-      verifyPriceSorting(sortOrder: 'lohi' | 'hilo'): Chainable<void>;
-      verifyNameSorting(sortOrder: 'az' | 'za'): Chainable<void>;
+      verifyPriceSorting(sortOrder: 'lohi' | 'hilo'): Chainable<Element>;
+      verifyNameSorting(sortOrder: 'az' | 'za'): Chainable<Element>;
     }
   }
 }

@@ -19,13 +19,13 @@ Cypress.Commands.add('getById', (id: string, ...args: any[]) => {
 Cypress.Commands.add('verifyPriceSorting', (sortOrder: 'lohi' | 'hilo') => {
     cy.get('.product_sort_container').select(sortOrder);
     cy.get('.inventory_item_price').then(($prices) => {
-      const priceValues = Cypress._.map($prices, (el) => 
-        parseFloat(el.innerText.replace('$', ''))
-      );
-      const sortedPrices = [...priceValues].sort((a, b) => 
-        sortOrder === 'lohi' ? a - b : b - a
-      );
-      expect(priceValues).to.deep.equal(sortedPrices);
+        const priceValues = Cypress._.map($prices, (el) => 
+            parseFloat(el.innerText.replace('$', ''))
+        );
+        const sortedPrices = [...priceValues].sort((a, b) => 
+            sortOrder === 'lohi' ? a - b : b - a
+        );
+        expect(priceValues).to.deep.equal(sortedPrices);
     });
 });
 
